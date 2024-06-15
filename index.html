@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ТЗ</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/style/main.css" />
+    </head>
+
+    <body>
+        <!--==================== NAV ====================-->
+        <nav class="nav">
+            <div class="container">
+                <div class="nav__content">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <a href="javascript:void(0);"><img src="assets/img/toggle.svg" alt="Toggle" /></a>
+                    </div>
+                    <div class="nav__img">
+                        <img src="assets/img/logo 1.svg" alt="Logo" />
+                    </div>
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="" class="nav__link">ГЛАВНАЯ</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">ДОМА</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">БАНИ</a>
+                            </li>
+                        </ul>
+                        <div class="nav__close" id="nav-close">
+                            <img src="assets/img/close.svg" alt="Close" />
+                        </div>
+                    </div>
+                    <div class="nav__contacts">
+                        <div class="nav__contacts-place">
+                            <p>Санкт-Петербург:</p>
+                            <p>Москва:</p>
+                        </div>
+                        <div class="nav__contacts-number">
+                            <p class="nav__text">8 (812) 603-72-22</p>
+                            <p class="nav__text">8 (499) 380-77-33</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">«Пестовский Лесокомбинат»</h1>
+                    <p class="header__text">Cтань частью нашей команды!</p>
+                    <button class="header__btn" id="header-btn">ОТПРАВИТЬ АНКЕТУ</button>
+                </div>
+            </div>
+
+            <div class="header__form" id="header-form">
+                <div class="header__form-top">
+                    <img src="assets/img/close.svg" alt="" id="header__form-close" />
+                </div>
+                <h3 class="header__form-title">Заполните анкету</h3>
+                <div>
+                    <form id="form" class="header__form-content">
+                        <input type="text" placeholder="Ф.И.О" class="header__form-info" required />
+                        <input type="number" placeholder="Телефон" class="header__form-info" required />
+                        <div class="header__form-change">
+                            <p class="header__form-subtitle">Отклик на вакансию</p>
+                            <select required>
+                                <option class="header__form-option" value="" disabled selected>Выберите вакансию</option>
+                                <option class="header__form-option">Прораб</option>
+                            </select>
+                        </div>
+                        <p class="header__form-subtitle">Ваше резюме</p>
+                        <p class="header__form-text form-text1">
+                            Есть резюме в формате .pdf или .doc? <br />
+                            Приложите и отправьте его нам.
+                        </p>
+                        <div class="header__form-change-cv">
+                            <input type="file" id="header-cv" class="header__form-cv" />
+                            <label for="header-cv" class="header__form-cv-label">Загрузить файл</label>
+                        </div>
+                        <div class="header__form-privacy-policy">
+                            <input type="checkbox" id="privacy-policy" class="checkbox" required />
+                            <p class="header__form-text">
+                                Я ознакомлен(а) с Политикой конфиденциальности и согласен(на) на обработку персональных данных физическим лицом. Я
+                                понимаю, что предоставляю согласие на обработку персональных данных для использования предоставляемых возможностей
+                                Веб-сервиса.
+                                <br /><br />
+                                Мне исполнилось 18 лет
+                            </p>
+                        </div>
+                        <button type="submit" id="header-submit" class="header__btn">ОТПРАВИТЬ АНКЕТУ</button>
+                    </form>
+                </div>
+            </div>
+            <div class="header__sent" id="header-sent">
+                <div class="header__sent-top">
+                    <img src="assets/img/close.svg" alt="" id="header__sent-close" />
+                </div>
+                <div class="header__sent-content">
+                    <h3 class="header__sent-title">Анкета отправлена</h3>
+                    <div class="header__sent-img">
+                        <img src="assets/img/galochka.svg" alt="" />
+                    </div>
+                    <p class="header__sent-text">
+                        Спасибо за ваш отклик и интерес. <br /><br />
+                        Мы рассмотрим вашу анкету<br />
+                        и свяжемся с вами<br />
+                        в течение 2 рабочих дней.
+                    </p>
+                    <button class="header__btn" id="sent-btn">Перейти на главную</button>
+                </div>
+            </div>
+        </header>
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <section class="about">
+                <div class="container">
+                    <div class="about__content">
+                        <h3 class="about__title">о компании</h3>
+                        <div class="about__content-cards">
+                            <div class="about__cards-card">
+                                <p class="about__card-title">2</p>
+                                <p class="about__card-text">
+                                    Города присутствия: <br />
+                                    Санкт-Петербург и Москва
+                                </p>
+                            </div>
+                            <div class="about__cards-card">
+                                <p class="about__card-title">>30</p>
+                                <p class="about__card-text">Лет среди лидеров рынка</p>
+                            </div>
+                            <div class="about__cards-card">
+                                <p class="about__card-title">100</p>
+                                <p class="about__card-text">Домов и бань сдаём ежегодно</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="select">
+                <div class="container">
+                    <div class="select__content">
+                        <h3 class="select__title">Выбери подразделение:</h3>
+                        <div class="select__content-top">
+                            <p class="select__top-text">Строительный отдел</p>
+                            <p class="select__top-text">офис</p>
+                            <p class="select__top-text">финансовый отдел</p>
+                            <p class="select__top-text">Отдел продаж</p>
+                            <p class="select__top-text">внештатный сотрудник</p>
+                        </div>
+                        <div class="select__content-bottom">
+                            <div class="select__content-card">
+                                <div class="select__card-header">
+                                    <div class="select__card-left">
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/user.svg" alt="" />
+                                            <p>Прораб</p>
+                                        </div>
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/ruble.svg" alt="" />
+                                            <p><span>от 00 000 руб</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="select__card-right">
+                                        <img src="./assets/img/plus.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="select__card-content">
+                                    <div class="select__card-descr">
+                                        <h2>Задачи:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Наши ожидания:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Мы предлагаем:</h2>
+                                        <ul>
+                                            <li>график 5/2 с гибким началом рабочего дня;</li>
+                                            <li>оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;</li>
+                                            <li>ежеквартальную премию по итогам работы;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select__content-card">
+                                <div class="select__card-header">
+                                    <div class="select__card-left">
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/user.svg" alt="" />
+                                            <p>Специалист службы снабжения</p>
+                                        </div>
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/ruble.svg" alt="" />
+                                            <p><span>от 00 000 руб</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="select__card-right">
+                                        <img src="./assets/img/plus.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="select__card-content">
+                                    <div class="select__card-descr">
+                                        <h2>Задачи:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Наши ожидания:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Мы предлагаем:</h2>
+                                        <ul>
+                                            <li>график 5/2 с гибким началом рабочего дня;</li>
+                                            <li>оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;</li>
+                                            <li>ежеквартальную премию по итогам работы;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select__content-card">
+                                <div class="select__card-header">
+                                    <div class="select__card-left">
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/user.svg" alt="" />
+                                            <p>Логист</p>
+                                        </div>
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/ruble.svg" alt="" />
+                                            <p><span>от 00 000 руб</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="select__card-right">
+                                        <img src="./assets/img/plus.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="select__card-content">
+                                    <div class="select__card-descr">
+                                        <h2>Задачи:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Наши ожидания:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Мы предлагаем:</h2>
+                                        <ul>
+                                            <li>график 5/2 с гибким началом рабочего дня;</li>
+                                            <li>оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;</li>
+                                            <li>ежеквартальную премию по итогам работы;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select__content-card">
+                                <div class="select__card-header">
+                                    <div class="select__card-left">
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/user.svg" alt="" />
+                                            <p>Проектировщик</p>
+                                        </div>
+                                        <div class="select__card-title">
+                                            <img src="./assets/img/ruble.svg" alt="" />
+                                            <p><span>от 00 000 руб</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="select__card-right">
+                                        <img src="./assets/img/plus.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="select__card-content">
+                                    <div class="select__card-descr">
+                                        <h2>Задачи:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Наши ожидания:</h2>
+                                        <ul>
+                                            <li>описание</li>
+                                            <li>описание</li>
+                                        </ul>
+
+                                        <h2>Мы предлагаем:</h2>
+                                        <ul>
+                                            <li>график 5/2 с гибким началом рабочего дня;</li>
+                                            <li>оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;</li>
+                                            <li>ежеквартальную премию по итогам работы;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="select__btn">откликнуться на вакансию</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="advantages">
+                <div class="container">
+                    <div class="advantages__content">
+                        <h3 class="advantages__title">Преимущества Компании</h3>
+                        <div class="advantages__content-descrs">
+                            <div class="advantages__descrs-card">
+                                <div class="advantages__card-left">
+                                    <img class="advantages__card-image" src="./assets/img/vaadin_medal.svg" alt="" />
+                                </div>
+                                <div class="advantages__card-right">
+                                    <div class="advantages__card-top">
+                                        <h4 class="advantages__card-title">Качество продукта</h4>
+                                        <div class="advantages__card-btn">
+                                            <img src="./assets/img/plus.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="advantages__card-text">
+                                        <p>
+                                            Мы гордимся результатами своей работы! Мы убеждены, что именно качество — это самое главное, это то,
+                                            что даёт Нам уверенность в завтрашнем дне.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages__descrs-card">
+                                <div class="advantages__card-left">
+                                    <img class="advantages__card-image" src="./assets/img/clarity_world.svg" alt="" />
+                                </div>
+                                <div class="advantages__card-right">
+                                    <div class="advantages__card-top">
+                                        <h4 class="advantages__card-title">Популярность бренда в сети</h4>
+                                        <div class="advantages__card-btn">
+                                            <img src="./assets/img/plus.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="advantages__card-text">
+                                        <p>
+                                            Мы занимаем высокие позиции в поисковой выдаче и имеем многочисленные отзывы, привлекающие новых
+                                            заказчиков независимо от времени года.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages__descrs-card">
+                                <div class="advantages__card-left">
+                                    <img class="advantages__card-image" src="./assets/img/office-chair.svg" alt="" />
+                                </div>
+                                <div class="advantages__card-right">
+                                    <div class="advantages__card-top">
+                                        <h4 class="advantages__card-title">Передовое рабочее место</h4>
+                                        <div class="advantages__card-btn">
+                                            <img src="./assets/img/plus.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="advantages__card-text">
+                                        <p>
+                                            Комфортный офис в центре г. Санкт-Петербург, оборудованный передовыми технологиями. Твой рабочий компьютер
+                                            может быть даже в твоём смартфоне!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages__descrs-card">
+                                <div class="advantages__card-left">
+                                    <img class="advantages__card-image" src="./assets/img/economic-growth.svg" alt="" />
+                                </div>
+                                <div class="advantages__card-right">
+                                    <div class="advantages__card-top">
+                                        <h4 class="advantages__card-title">Свои автоматизированные системы обучения</h4>
+                                        <div class="advantages__card-btn">
+                                            <img src="./assets/img/plus.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="advantages__card-text">
+                                        <p>
+                                            Создали и постоянно улучшаем собственные автоматизированные системы обучения специалистов и повышения
+                                            их квалификации внутри компании.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages__descrs-card">
+                                <div class="advantages__card-left">
+                                    <img class="advantages__card-image" src="./assets/img/cup.svg" alt="" />
+                                </div>
+                                <div class="advantages__card-right">
+                                    <div class="advantages__card-top">
+                                        <h4 class="advantages__card-title">Сотрудничество с ведущими Компаниями рынка</h4>
+                                        <div class="advantages__card-btn">
+                                            <img src="./assets/img/plus.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="advantages__card-text">
+                                        <p>
+                                            Сотрудничаем с ведущими Компаниями рынка строительных материалов: «Grand Line», «Петрович», «Окна
+                                            Петербурга», «КраскиДоски», «Technonicol» и другими.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="products">
+                <div class="container">
+                    <div class="products__content">
+                        <h3 class="products__title">продукты компании</h3>
+                        <div class="products__content-top">
+                            <p class="products__top-text">БАНИ</p>
+                            <p class="products__top-text">ДОМА</p>
+                        </div>
+                        <div class="products__content-bottom swiper">
+                            <div class="products__content-cards swiper-wrapper">
+                                <div class="products__cards-card swiper-slide"></div>
+                                <div class="products__cards-card swiper-slide"></div>
+                                <div class="products__cards-card swiper-slide"></div>
+                                <div class="products__cards-card swiper-slide"></div>
+                                <div class="products__cards-card swiper-slide"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="carrer">
+                <div class="container">
+                    <div class="carrer__content">
+                        <div class="carrer_title">Карьерный рост</div>
+                        <div class="carrer__content-top">
+                            <div class="carrer__content-item">
+                                <img src="./assets/img/carrer.svg" alt="" />
+                                <p>Наша Компания является ярким примером, где достойные люди смело и заслуженно поднимаются по карьерной лестнице.</p>
+                            </div>
+                            <div class="carrer__content-item">
+                                <img src="./assets/img/carrer2.svg" alt="" />
+                                <p>Мы ценим стремление к развитию и предоставляем все необходимые для этого условия.</p>
+                            </div>
+                        </div>
+                        <div class="carrer__content-bottom swiper">
+                            <div class="carrer__content-cards swiper-wrapper">
+                                <div class="carrer__cards-card swiper-slide">
+                                    <div class="carrer__card-top">
+                                        <div class="carrer__card-img">
+                                            <img src="./assets/img/Олег.svg" alt="" />
+                                            <div class="gradient1"></div>
+                                            <div class="gradient2"></div>
+                                            <div class="gradient3"></div>
+                                            <div class="carrer__card-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="carrer__card-bottom">
+                                        <h5 class="carrer__card-name">Олег Воробьёв<br /><span>Прораб</span></h5>
+                                        <ul class="carrer__card-list">
+                                            <li class="carrer__card-text">
+                                                В Компании с 2018 года. Начал с позиции плотника в строительной бригаде.
+                                            </li>
+                                            <br />
+                                            <li class="carrer__card-text">
+                                                В течение года работы Олег стал бригадиром и был приглашён в офис Компании на должность штатного
+                                                Производителя строительных работ.
+                                            </li>
+                                            <br />
+                                            <li class="carrer__card-text">
+                                                На данный момент в Его подчинении находятся 9 строительных бригад. Олег вносит весомый вклад
+                                                в итоговый результат Компании, а это реализация 100 объектов в год!
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carrer__cards-card swiper-slide">
+                                    <div class="carrer__card-top">
+                                        <div class="carrer__card-img2">
+                                            <img class="Danil-img" src="./assets/img/Данил.svg" alt="" />
+                                            <div class="gradient1"></div>
+                                            <div class="gradient2"></div>
+                                            <div class="gradient3"></div>
+                                            <div class="carrer__card-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="carrer__card-bottom">
+                                        <h5 class="carrer__card-name">Даниил Басенков<br /><span>Менеджер по снабжению</span></h5>
+                                        <ul class="carrer__card-list">
+                                            <li class="carrer__card-text">В декабре 2018 года заступил на должность Менеджера отдела продаж.</li>
+                                            <br />
+                                            <li class="carrer__card-text">
+                                                После 9 месяцев стабильных результатов, зарекомендовав себя как надёжный сотрудник, получил
+                                                ответственную должность Логиста
+                                            </li>
+                                            <br />
+                                            <li class="carrer__card-text">
+                                                Через год Даниил занял должность Специалиста службы снабжения, взяв на себя помимо закупа материала
+                                                ещё и крайне важную роль Сметчика.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carrer__cards-card swiper-slide">
+                                    <div class="carrer__card-top">
+                                        <div class="carrer__card-img">
+                                            <img src="./assets/img/Мария.svg" alt="" />
+                                            <div class="gradient1"></div>
+                                            <div class="gradient2"></div>
+                                            <div class="gradient3"></div>
+                                            <div class="carrer__card-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="carrer__card-bottom">
+                                        <h5 class="carrer__card-name">Мария Обухова<br /><span>Руководитель финансовой службы</span></h5>
+                                        <ul class="carrer__card-list">
+                                            <li class="carrer__card-text">В декабре 2018 года заступил на должность Менеджера отдела продаж.</li>
+                                            <br />
+                                            <li class="carrer__card-text">
+                                                После 9 месяцев стабильных результатов, зарекомендовав себя как надёжный сотрудник, получил
+                                                ответственную должность Логиста.
+                                            </li>
+                                            <br />
+                                            <li class="carrer__card-text">
+                                                Через год Даниил занял должность Специалиста службы снабжения, взяв на себя помимо закупа материала
+                                                ещё и крайне важную роль Сметчика.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carrer__pagination swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="team">
+                <div class="container">
+                    <div class="team__content">
+                        <p class="team__content-title">
+                            Наши успехи — это заслуга замечательных людей, <br> работающих в нашей Команде. <br /><br />
+                            У Нас всегда есть вакансии для сильных кандидатов
+                        </p>
+                        <div class="team__content-offer">
+                            <p class="team__content-text">Если чувствуешь в Себе потенциал и здоровые амбиции — ждём рядом с Нами!</p>
+                            <button class="team__btn">Присоединиться к команде</button>
+                        </div>
+                        <div class="team_content-gradient"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts">
+                <div class="container">
+                    <div class="contacts__content">
+                      <div class="contacts__content-top">
+                          <h3 class="contacts__title">КОНТАКТЫ</h3>
+                            <div class="contacts__top-texts">
+                                <p class="contacts__top-text">САНКТ-ПЕТЕРБУРГ</p>
+                                <p class="contacts__top-text">МОСКВА</p>
+                            </div>
+                            <div class="contacts__top-addresses">
+                                <div class="contacts__adresses-item">
+                                    <img src="./assets/img/phone.svg" alt="" />
+                                    <p>8 (812) 602-77-60</p>
+                                </div>
+                                <div class="contacts__adresses-item">
+                                    <img src="./assets/img/email.svg" alt="" />
+                                    <p>info@pplk.ru</p>
+                                </div>
+                                <div class="contacts__adresses-item item3">
+                                    <img src="./assets/img/location.svg" alt="" />
+                                    <p>
+                                        ул. Заозёрная, д. 8 к. 2, офис 202 <br />
+                                        (7 мин. пешком от метро Фрунзенская)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contacts__top-socialmedia">
+                                <img src="./assets/img/bi_youtube.svg" alt="" />
+                                <img src="./assets/img/Telegram.svg" alt="" />
+                                <img src="./assets/img/Vk.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="contacts__content-bottom">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1000.2351753052914!2d30.32280332345918!3d59.907740997154384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1718013888421!5m2!1sru!2s"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__content-text">
+                        © 2023 Пестовский Лесокомбинат. Все права защищены. <span><br> Оформить заявку на кредит <br> Реквизиты <br> Политика конфиденциальности</span>
+                    </p>
+                    <img src="./assets/img/logo.svg" alt="" class="footer__content-logo" />
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
